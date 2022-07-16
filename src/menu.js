@@ -1,15 +1,21 @@
 import {menu} from './menuItems.js';
+import aleImg from './ale.jpg';
 
-menu.createMenuItem('The Holy Grale','ale.jpg','$30');
-menu.createMenuItem('Hale Mary','ale.jpg','$30');
-menu.createMenuItem('Boring Gingle Ale','ale.jpg','$10');
-menu.createMenuItem('Another Boring Gingle Ale','ale.jpg','$10');
-
-console.log(menu.getMenuItems());
+menu.createMenuItem('The Holy Grale',aleImg,'$30');
+menu.createMenuItem('Hale Mary',aleImg,'$30');
+menu.createMenuItem('Boring Gingle Ale',aleImg,'$10');
+menu.createMenuItem('Another Boring Gingle Ale',aleImg,'$10');
+menu.createMenuItem('Last Boring Gingle Ale I Promise',aleImg,'$10');
 
 export default function() {
   const menuContent = document.createElement('div');
   menuContent.classList.add('menu-content');
+
+  const menuTitle = document.createElement('h1');
+  menuTitle.textContent = 'Menu';
+
+  const menuItself = document.createElement('div');
+  menuItself.classList.add('menu-itself');
 
   for (const i of menu.getMenuItems()) {
     const menuItem = document.createElement('div');
@@ -27,8 +33,11 @@ export default function() {
     menuItem.appendChild(itemName);
     menuItem.appendChild(itemPrice);
     
-    menuContent.appendChild(menuItem);
+    menuItself.appendChild(menuItem);
   }
+
+  menuContent.appendChild(menuTitle);
+  menuContent.appendChild(menuItself);
 
   const main = document.querySelector('.main');
   main.appendChild(menuContent);

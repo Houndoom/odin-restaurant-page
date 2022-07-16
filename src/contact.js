@@ -10,10 +10,10 @@ export default function () {
   dirHeading.textContent = "Directions";
 
   const dirOl = document.createElement('ol');
-  const dirLi1 = document.createElement('ul')
-  const dirLi2 = document.createElement('ul');
-  const dirLi3 = document.createElement('ul');
-  const dirLi4 = document.createElement('ul');
+  const dirLi1 = document.createElement('li')
+  const dirLi2 = document.createElement('li');
+  const dirLi3 = document.createElement('li');
+  const dirLi4 = document.createElement('li');
 
   dirLi1.textContent = "Pick a direction";
   dirLi2.textContent = "Walk in that direction";
@@ -48,5 +48,8 @@ export default function () {
   contactContent.appendChild(telP);
   contactContent.appendChild(emailHeading);
   contactContent.appendChild(emailP);
+
+  const main = document.querySelector('.main');
+  main.appendChild(contactContent);
 
 }

@@ -78,10 +78,14 @@ html, body{
 
 .menu-content {
   background-color: var(--body-color-2);
+}
+
+.menu-itself {
   display: grid;
   justify-content: center;
   align-content: start;
   gap: 50px;
+  grid-template-columns: repeat(auto-fill, 300px);
 }
 
 .menu-item {
