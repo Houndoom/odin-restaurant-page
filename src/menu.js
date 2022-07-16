@@ -1,6 +1,7 @@
 import {menu} from './menuItems.js';
 import aleImg from './ale.jpg';
 
+// Add items to menu
 menu.createMenuItem('The Holy Grale',aleImg,'$30');
 menu.createMenuItem('Hale Mary',aleImg,'$30');
 menu.createMenuItem('Boring Gingle Ale',aleImg,'$10');

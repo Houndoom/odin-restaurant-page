@@ -2,7 +2,7 @@ export {menu};
 
 const menu = (() => {
 
-  const _menuItems = [];
+  const _menuItems = []; // Object containing menu items
 
   const createMenuItem = (itemName, imgSrc, itemPrice) => {
     const newMenuItem = new menuItem(itemName, imgSrc, itemPrice);
